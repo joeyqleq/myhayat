@@ -1,0 +1,71 @@
+:root, [data-bs-theme=light] {
+  --bs-body-bg: #f489bc;
+  --bs-body-bg-rgb: 244,137,188;
+}
+
+:root {
+  --bs-navbar-color: #f489bc;
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+form, form * {
+  color: #fec810 !important;
+}
+
+button, .btn {
+  background-color: #ff86db;
+  /*color: white;*/
+  padding: 10px 10px;
+  /*font-size: 16px;*/
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  border: none;
+  border-bottom-width: 17.88889px;
+}
+
+button:hover, .btn:hover {
+  background-color: #e675c5;
+}
+
+button:active, .btn:active {
+  animation: buttonClick 0.2s ease-in-out;
+}
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+    background-color: #ff86db;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #e675c5;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #ff86db;
+  }
+}
+
+/* Hover animation */
+
+/* Text color animation */
+
+/* Glitch movement animation */
+
