@@ -1,0 +1,158 @@
+.text-muted {
+  color: var(--bs-secondary-text-emphasis);
+  font-size: 22px !important;
+}
+
+.custom-intro-heading {
+  text-shadow: 2px 1px var(--bs-light-text-emphasis);
+  color: #fec810;
+  font-family: 'Architects Daughter', serif;
+  font-size: 51px;
+  border-color: #fec810;
+  padding-bottom: 0px;
+  text-align: justify;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  margin-right: -12px;
+  padding-right: 4px;
+  padding-top: 10px;
+  margin-top: -16px;
+}
+
+.custom-image {
+  margin-left: -10px;
+}
+
+.custom-intro-subheading {
+  color: #fec810;
+  font-size: 18px;
+  font-family: Montserrat, sans-serif;
+  text-shadow: 1px 1px #343a40;
+}
+
+.section-heading {
+  color: #fec810;
+  font-family: 'Galada', serif;
+  font-size: 60px;
+  text-align: center;
+  line-height: 1.4;
+  height: 116.9896px;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 5px;
+}
+
+/* Styling each letter */
+
+.section-heading span {
+  position: relative;
+  display: inline-block;
+  animation: glitch 2s infinite ease-in-out;
+  color: inherit;
+}
+
+/* Glitch effect for each letter */
+
+@keyframes glitch {
+  0%, 100% {
+    text-shadow: -5px 0px #ff6262, 5px 0px #fe7e6e, 0px -5px #ff6262, 0px 5px #fe7e6e;
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    text-shadow: -7px 0px #fec810, 7px 0px #f489bc, 0px -7px #fec810, 0px 7px #f489bc;
+    transform: translateX(-2px) translateY(2px) rotate(1deg);
+  }
+  50% {
+    text-shadow: -6px 0px #f489bc, 6px 0px #ff6262, 0px -6px #f489bc, 0px 6px #ff6262;
+    transform: translateX(2px) translateY(-2px) rotate(-1deg);
+  }
+  75% {
+    text-shadow: -4px 0px #ff6262, 4px 0px #fec810, 0px -4px #ff6262, 0px 4px #fec810;
+    transform: translateX(-1px) translateY(1px) rotate(0.5deg);
+  }
+}
+
+/* Apply different animation delays to each span */
+
+.section-heading span:nth-child(odd) {
+  animation-delay: 0s;
+}
+
+.section-heading span:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.section-heading span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.section-heading span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.section-heading span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.section-heading span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+/* Specific class for spaces */
+
+.section-heading .space {
+  display: inline-block;
+  width: 10px;
+  animation: none;
+}
+
+.sub-section-heading {
+  color: #ff6262;
+  font-family: 'Barrio', serif;
+  font-size: 30px;
+  text-shadow: -2px 1px #000000;
+}
+
+.custom-text-muted {
+  font-size: 23px;
+  color: #000000;
+  font-family: 'Cherry Swash', serif;
+  text-shadow: -3px 1px #fec810, 2px 1px #fec810;
+  border-top-left-radius: 40px;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption {
+  transition: all ease .5s;
+  opacity: 0;
+  background-color: rgba(39,145,222,0.9);
+}
+
+/* Rotating image (default for desktops) */
+
+.rotating-img {
+  animation: rotate 3s linear infinite;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+/* Keyframes for rotation */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Static image for mobile */
+
+@media (max-width: 768px) {
+  .rotating-img {
+    animation: none;
+    transform: none;
+  }
+}
+

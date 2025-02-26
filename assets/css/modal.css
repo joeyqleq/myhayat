@@ -32,10 +32,31 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.modal.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.modal.hide {
+  opacity: 0;
+  transform: translateY(-30px);
+  visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 /* Modal Content Animation for Scale Effect */
 
 .modal-content {
   transition: transform 0.5s ease;
+  transform: scale(0.95);
+}
+
+.modal.show .modal-content {
+  transform: scale(1);
+}
+
+.modal.hide .modal-content {
   transform: scale(0.95);
 }
 
@@ -48,12 +69,7 @@
   }
 }
 
-.modal-body {
-  font-family: 'Cherry Swash', serif;
-  color: #fec810;
-  font-size: 23px;
-  text-shadow: -1px 0px #000000, -3px 0px #000000;
-  padding: 0px;
-  margin: -9px;
+.text-secondary {
+  color: #000000 !important;
 }
 
