@@ -38,6 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     border: 8px ridge var(--primary-coral);
+    width: 90%;
 }
 
 .chat-header {
@@ -72,6 +73,7 @@ body {
     linear-gradient(60deg, #F0A18D 25%, transparent 25.5%, transparent 75%, #F0A18D 75%, #F0A18D);
     background-size: 28px 49px;
     background-position: 0 0, 0 0, 14px 24.5px, 14px 24.5px, 0 0, 14px 24.5px;
+    min-height: 300px;
 }
 
 .message {
@@ -79,6 +81,7 @@ body {
     padding: 10px 15px;
     border-radius: 15px;
     max-width: 80%;
+    word-wrap: break-word;
 }
 
 .bot-message {
@@ -108,6 +111,7 @@ body {
     border: none;
     border-radius: 20px;
     font-family: 'Cherry Swash', serif;
+    font-size: 16px;
 }
 
 .chat-input button {
@@ -119,6 +123,7 @@ body {
     font-family: 'Barrio', cursive;
     cursor: pointer;
     transition: transform 0.2s;
+    font-size: 18px;
 }
 
 .chat-input button:hover {
