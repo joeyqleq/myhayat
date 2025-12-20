@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors from Legacy */
+  /* Pink: #f489bc */
+  /* Yellow: #fec810 */
+  /* Coral/Orange: #fe7e6e */
+  /* Red: #ff6262 */
+
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Primary (Pink) */
+  --primary: #f489bc;
+  --primary-foreground: #ffffff;
+
+  /* Secondary (Yellow) - used for highlights/text in legacy */
+  --secondary: #fec810;
+  --secondary-foreground: #000000;
+
+  /* Accent (Coral) */
+  --accent: #fe7e6e;
+  --accent-foreground: #ffffff;
+
+  /* Destructive (Red) */
+  --destructive: #ff6262;
+  --destructive-foreground: #ffffff;
+
+  --muted: #f4f4f5;
+  --muted-foreground: #737373;
+
+  --card: #ffffff;
+  --card-foreground: #171717;
+
+  --radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    /* Slightly adjusted for dark mode if needed, but keeping brand identity */
+    --primary: #f489bc;
+    --primary-foreground: #000000;
+
+    --muted: #262626;
+    --muted-foreground: #a3a3a3;
+
+    --card: #171717;
+    --card-foreground: #ededed;
+  }
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --font-barrio: var(--font-barrio);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glitch-text {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .glitch-text:hover {
+     animation: glitch-color 0.5s infinite alternate ease-in-out, glitch-move 0.2s infinite alternate ease-in-out;
+  }
+}
+
+@keyframes glitch-color {
+  0% { color: #f489bc; text-shadow: 1px 1px 0 #000; }
+  25% { color: #fec810; text-shadow: 2px 2px 1px #000; }
+  50% { color: #fe7e6e; text-shadow: 1px -1px 0 #000; }
+  75% { color: #f489bc; text-shadow: 2px 2px 2px #000; }
+  100% { color: #fec810; text-shadow: 1px 1px 0 #000; }
+}
+
+@keyframes glitch-move {
+  0% { transform: translateX(0) translateY(0) rotate(0deg); }
+  50% { transform: translateX(-2px) translateY(1px) rotate(0.5deg); }
+  100% { transform: translateX(2px) translateY(-1px) rotate(-0.5deg); }
+}
